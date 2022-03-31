@@ -1,10 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
+
 const generateHTML = require('./src/generateHTML');
+
+const Employee = require('./lib/Employee');
 const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 const Intern = require('./lib/Intern');
+
 const team = [];
 
 const managerPrompt = () => {
@@ -75,6 +79,15 @@ const managerPrompt = () => {
         `);
     })
 };
+
+function addEmployee () {
+    inquirer.prompt ([
+        {
+            type: "list",
+            message: 
+        }
+    ])
+}
 
 const employeePrompt = () => {
     return inquirer.prompt ([

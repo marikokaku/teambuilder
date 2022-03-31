@@ -10,29 +10,32 @@ const employee = new Employee('Dave', 'dave@email.com', 1);
 
 // get name using getName()
 test('get employee name', () => {
-  const employee = new Employee('Dave', 'dave@email.com', 1);
+  const name = 'Dave';
+  const employee = new Employee(name);
 
-  expect(employee.getName()).toEqual(expect.any(String));
+  expect(employee.getName()).toBe(name);
 });
 
 
 // get name using getEmail()
 test('get employee email', ()=> {
-  const employee = new Employee('Dave', 'dave@email.com', 1);
+  const email = 'dave@email.com';
+  const employee = new Employee('Dave', email);
 
-  expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
-})
+  expect(employee.getEmail()).toBe(email);
+});
 
-// get name using getId()
+// get name with getId()
 test('get employee id', () => {
-  const employee = new Employee('Dave', 'dave@email.com', 1);
+  const id = '1'
+  const employee = new Employee('Dave', 'dave@email.com', id);
 
-  expect(employee.getId()).toEqual(expect.any(Number));
-})
+  expect(employee.getId()).toBe(id);
+});
 
-// get role using getRole()
+// get role with getRole()
 test('get employee role', () => {
   const employee = new Employee('Dave', 'dave@email.com', 1);
 
-  expect(employee.getRole()).toBe("Employee");
+  expect(employee.getRole()).toBe('Employee');
 })
